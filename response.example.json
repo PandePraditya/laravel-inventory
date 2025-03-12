@@ -1,0 +1,45 @@
+{
+    "user": {
+        "data": {
+            "full_name": "John Doe",
+            "username": "johndoe",
+            "email": "johndoe@example.com",
+            "phone_number": "1234567890",
+            "password": "password123",
+            "role": "admin / user",
+            "division": "HR / Finance"
+        }
+    },
+    "inventory": {
+        "data": {
+            "name": "Laptop",
+            "room": "jakarta",
+            "user": "johndoe",
+            "image": "https://example.com/laptop.jpg"
+        }
+    },
+    "reports": {
+        "data": {
+            "problem": "Keyboard not working",
+            "message": "The keyboard is not working properly.",
+            "user": {
+                "full_name": "John Doe",
+                "email": "johndoe@example.com"
+            },
+            "inventory": {
+                "name": "Laptop",
+                "room": "Jakarta"
+            }
+        }
+    },
+    "contact_messages": {
+        "data": {
+            "message": "Hello, I have a question about my inventory.",
+            "user": {
+                "full_name": "John Doe",
+                "email": "johndoe@example.com",
+                "phone_number": "1234567890"
+            }
+        }
+    }
+}

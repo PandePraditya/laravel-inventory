@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('member_requests', function (Blueprint $table) {
             $table->id();
+            $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
+            $table->foreignId('user_id')->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

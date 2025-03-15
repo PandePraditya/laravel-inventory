@@ -14,8 +14,8 @@ class DivisionSeeder extends Seeder
     public function run(): void
     {
         $divisions = [
-            ['id' => 1, 'name' => 'Frontend Developer'],
-            ['id' => 2, 'name' => 'Backend Developer'],
+            ['name' => 'Frontend Developer'],
+            ['name' => 'Backend Developer'],
         ];
         
         foreach ($divisions as $division) {

@@ -27,7 +27,7 @@ class RegisterRequest extends FormRequest
         return [
             'full_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'phone_number' => 'required|digits_between:10,15', // dont add |numeric|, it will add decimal
+            'phone_number' => 'required|digits_between:10,15|unique:users', // dont add |numeric|, it will add decimal
             'password' => [
                 'required',
                 'string',
@@ -54,6 +54,7 @@ class RegisterRequest extends FormRequest
             'email.unique' => 'Email is already taken, please use another email.',
             'phone_number.required' => 'Phone number is required.',
             'phone_number.digits_between' => 'Phone number must be between 10 and 15 digits.',
+            'phone_number.unique' => 'Phone number is already taken, please use another phone number.',
             'password.required' => 'Password is required.',
             'password.string' => 'Password must be a string.',
             'password.confirmed' => 'Password confirmation does not match.',

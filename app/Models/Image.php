@@ -12,4 +12,9 @@ class Image extends Model
     protected $fillable = [
         'url',
     ];
+
+    public function inventories()
+    {
+        return $this->hasMany(Inventory::class);
+    }
 }
